@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Lexend } from "next/font/google";
+import { Manrope, Syne } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
-const lexend = Lexend({
-  variable: "--font-lexend",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "The Digital Alchemist",
-  description: "Think Bigger. We don't just handle projects; we handle the life and dreams of our customers.",
+  title: "Midas Creative",
+  description:
+    "Midas Creative is a modern marketing agency helping brands scale with strategy, creative, and growth systems.",
 };
 
 export default function RootLayout({
@@ -24,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${lexend.variable} antialiased bg-black text-white selection:bg-white selection:text-black`}
-      >
+      <body className={`${manrope.variable} ${syne.variable} antialiased`}>
         {children}
       </body>
     </html>
